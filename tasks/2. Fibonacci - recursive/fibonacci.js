@@ -3,9 +3,13 @@ let res = [];
 export function getFibonacciUntil(n) {
 // function getFibonacciUntil(n) {
   //TODO write your code here, remember it should be recursive
-  if(n === 0)
+  n = parseInt(n);
+  if (isNaN(n)) {
+    throw new Error("Unable to parse int");
+  }
+  if(n <= 0)
   {
-    return [];
+    throw new Error("Error: Number is less than 1");
   }
   else if(n === 1)
   {

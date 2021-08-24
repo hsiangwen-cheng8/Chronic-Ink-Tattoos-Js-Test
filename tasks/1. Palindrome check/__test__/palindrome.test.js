@@ -15,4 +15,25 @@ describe('isPalindrome() function', () => {
 
     expect(isPalindrome(inputString)).to.equal(true);
   })
+
+  it('should return TRUE if given input is empty', function () {
+
+    const inputString = '';
+
+    expect(isPalindrome(inputString)).to.equal(true);
+  })
+
+  it('should return TRUE if given input is a palindrome', function () {
+
+    const inputString = 'at ta';
+
+    expect(isPalindrome(inputString)).to.equal(true);
+  })
+
+  it('should return False if given input is not a palindrome', function () {
+
+    const inputString = 'a t ta';
+
+    expect(isPalindrome(inputString)).to.equal(false);
+  })
 });
